@@ -1,16 +1,15 @@
-# compile main.c into a dll
-# link main.h with main.c
-# Link with the shared library dosato_lib.dll in the dosato_source directory
-
 # Compiler
+CC = gcc
+
 # Compiler flags
-CFLAGS = -Wall -Werror
+CFLAGS = -Wall -Werror -Wno-format
 
 # Include directories
-INCLUDES = -I./dosato_source
+INCLUDES = -I./dosato_source -I./src/include
 
 # Linker flags
-LDFLAGS = -L./dosato_source -ldosato_lib
+LDFLAGS_WINDOWS = -L./dosato_source -ldosato_lib -L./src/lib -lmingw32
+LDFLAGS_LINUX = -L./dosato_source -ldosato_lib -L./src/lib -lm -Wno-format -fPIC
 
 # Source files
 SRCS = main.c
@@ -19,7 +18,18 @@ SRCS = main.c
 OBJS = $(SRCS:.c=.o)
 
 # Target
-TARGET = mydll.dll
+TARGET = my_lib
+
+# Detect OS
+ifeq ($(OS),Windows_NT)
+	LDFLAGS = $(LDFLAGS_WINDOWS)
+	RM = del
+	TARGET := $(TARGET).dll
+else
+	LDFLAGS = $(LDFLAGS_LINUX)
+	RM = rm -f
+	TARGET := $(TARGET).so
+endif
 
 all: $(TARGET)
 
@@ -30,5 +40,4 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(TARGET)
-CC = gcc
+	$(RM) $(TARGET) *.o

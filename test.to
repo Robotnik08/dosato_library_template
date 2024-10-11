@@ -1,10 +1,10 @@
-import "mydll.dll";
+import "my_lib"
 
-make var result = sumTest(1, 2);
-do sayln(result); // 3
+make var result = sumTest(1, 2)
+do sayln(result) // 3
 
-set result = sumTest(3, 4);
-do sayln(result); // 7
+set result = sumTest(3, 4)
+do sayln(result) // 7
 
-set result = sumTest(5.4, 6.5);
-do sayln(result); // 11.9
+set result = sumTest(5.4, 6.5)
+do sayln(result) // 11.9
