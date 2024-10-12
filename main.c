@@ -33,7 +33,7 @@ Value sumTest (ValueArray args, bool debug) {
         CAST_SAFE(b, TYPE_DOUBLE);
 
         // return the sum of the two arguments with BUILD_DOUBLE
-        return BUILD_DOUBLE(a.as.doubleValue + b.as.doubleValue);
+        return BUILD_DOUBLE(AS_DOUBLE(a) + AS_DOUBLE(b));
     }
 
     // cast them to long
@@ -41,5 +41,5 @@ Value sumTest (ValueArray args, bool debug) {
     CAST_SAFE(b, TYPE_LONG);
 
     // return the sum of the two arguments with BUILD_LONG
-    return BUILD_LONG(a.as.longValue + b.as.longValue);
+    return BUILD_LONG(AS_LONG(a) + AS_LONG(b));
 }
