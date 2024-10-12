@@ -9,6 +9,8 @@ This repository contains a dosato.h and dosato_lib.dll file, these might be outd
 
 To use this library, you need to include the dosato.h file in your project and link the dosato_lib.dll or dosato_lib.so file to your project.<br>
 
+This demo contains only the dll, compile or fetch the .so file from the official repository if you're using a unix based os.<br>
+
 For this particular demo, use the following command to compile the program:<br>
 ```bash
 make
