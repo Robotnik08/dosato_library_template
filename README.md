@@ -5,7 +5,7 @@ More information about Dosato can be found [here](https://github.com/Robotnik08/
 
 ## How to use
 
-This repository contains a dosato.h and dosato_lib.dll file, these might be outdated in the future, so if you want to use the latest version of Dosato you can download it from the [official repository](https://github.com/Robotnik08/cdosato).<br>
+This repository contains a dosato.h and libdosato.dll file, these might be outdated in the future, so if you want to use the latest version of Dosato you can download it from the [official repository](https://github.com/Robotnik08/cdosato).<br>
 
 To use this library, you need to include the dosato.h file in your project and link the dosato_lib.dll or dosato_lib.so file to your project.<br>
 

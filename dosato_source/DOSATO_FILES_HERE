@@ -1,0 +1,4 @@
+Put the dosato header file and library file in here.
+"dosato.h" and "libsdosato.dll/so" are the default names.
+
+You can find them in the Dosato folder, that was installed with Dosato.
