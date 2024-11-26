@@ -5,12 +5,11 @@ More information about Dosato can be found [here](https://github.com/Robotnik08/
 
 ## How to use
 
-This repository contains a dosato.h and libdosato.dll file, these might be outdated in the future, so if you want to use the latest version of Dosato you can download it from the [official repository](https://github.com/Robotnik08/cdosato).<br>
+This repository contains the dosato_source folder, in this folder you must put `dosato.h` and `libdosato.dll/so`, You get them in the same folder Dosato installs too, which you can download here: [official repository](https://github.com/Robotnik08/cdosato).<br>
 
-To use this library, you need to include the dosato.h file in your project and link the dosato_lib.dll or dosato_lib.so file to your project.<br>
+To use this library, you need to include the `dosato.h` file in your project and link the `libdosato`.dll` or `libdosato.so` file to your project.<br>
 
-This demo contains only the header file, compile or fetch the .dll/.so file from the official repository.<br>
-If you have Dosato installed, you can also find the .dll/.so file in the installed Dosato directory.<br>
+If you have Dosato installed, you can find the .dll/.so file in the installed Dosato directory.<br>
 
 For this particular demo, use the following command to compile the program:<br>
 ```bash
@@ -33,4 +32,4 @@ import "path/to/your/library";
 do sayln(sumTest(5, 10));
 ```
 
-The `test.to` file in contains an example of how to use this library.<br>
+The `test.to` file in contains an example of how to use this specifc library.<br>
