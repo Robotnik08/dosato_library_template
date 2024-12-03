@@ -22,14 +22,14 @@ To test and use your library from within Dosato, open your script file and use t
 Dosato will automatically append the .dll or .so file to the path you provide in the import statement.<br>
 
 ```dosato
-import "path/to/your/library";
+import "path/to/your/library"
 ```
 
 After importing your library, you can use the functions defined in your library.<br>
 ```dosato
-import "path/to/your/library";
+import "path/to/your/library"
 
-do sayln(sumTest(5, 10));
+do sayln(sumTest(5, 10))
 ```
 
 The `test.to` file in contains an example of how to use this specifc library.<br>
